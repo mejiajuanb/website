@@ -1,0 +1,191 @@
+<!DOCTYPE html> 
+	<htlm>
+		<head>
+		<!--the next is a link that imports the bootstrap rules to make a website responsive-->
+			<link rel="stylesheet" href="https://
+			maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/
+			bootstrap.min.css"
+			>
+			<style>
+				h1 {
+					color:blue;
+					font-size: 25px;
+				}
+				h3 {
+					background-color: yellow;
+					font-size: 20px;
+					font-family: "Times New Roman";
+				}
+				body{
+					background-color: rgb(239, 225, 208);
+				}
+				img{
+					max-height:250px;
+					max-width: 250px;
+					height:auto;
+					width:auto;
+					margin:0px;
+				/*we resized the image and then used 0 margin*/
+				/*we are trying to keep the proportions of the image in original proportions - to see the normal version see the class slides*/
+				}
+				#introline {
+					font-size: 15px;
+					/*remember to try this also with classes for groups of paragraphs, etc - see slides*/
+				}
+				.priority{
+					color:blue;
+				}
+
+			</style>
+		</head>
+	<!--COMMENT-->
+		<body>
+		<!--I am inserting a NAVIGATION BAR in my website-->
+		<!--IMPORTANT! ask how to link element to a section within the website. This links to a header ID-->
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+					<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" datatoggle="collapse"
+						data-target="#navbar" aria-expanded="false" ariacontrols="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Startup Man</a>
+					</div>
+					<div id="navbar" class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+						<li class="active"><a href="#News/Commentary"">News/Commentary</a></li>
+						<li><a href="#HTA">How-To Articles</a></li>
+						<li><a href="#Essays">Essays</a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+					</div>
+			</nav>
+
+
+			<section>
+				<div>
+					<h1> Startup Man </h1>
+					<em> By Juan Mejia </em>
+				</div>
+				<div>
+					<p></p>
+					<a href="https://www.linkedin.com/in/juan-mejia-a4111326/" target="_blank"> LinkedIn Profile
+					</a>
+				</div>
+				<div>
+					<p></p>
+					<strong id ="introline"> Easy-to-understand thoughts on <span style = "color:green">startups</span>, <span style = "color:blue">technology</span> and <span style = "color:red">angel investing </span> </strong> 
+					<p></p>
+					<img src="http://is1.mzstatic.com/image/thumb/Music71/v4/67/72/af/6772afb1-b073-5f8b-c321-dbe99c330f9a/source/1200x630bb.jpg">
+				</div>
+			</section>
+
+			<section>
+				<div>
+					<h3 id ="News/Commentary" class = "priority"> News / Commentary </h3>
+					<p> <span style = "color:red">Relevant</span>, <span style="color:blue">quick-to-read </span> <span style="color:red">news</span>, posted frequently </p>
+				</div>
+
+				<div>
+					<small> Popular Topics </small>
+					<ul style ="list-style-type: square">
+						<li> Trends</li>
+						<li> Deals </li>
+						<li> Founders </li>
+						<li> IPOs </li>
+					</ul>
+				</div>
+			</section>
+
+
+			<section>
+				<div>
+					<h3 id="HTA" class = "priority"> How-To Articles </h3>
+					<p> Weekly <span style="color:red">How-To Articles</span> on the building blocks of the startup / venture world</p>
+				</div>
+				<div>
+					<small> Popular Topics </small>
+					<ul style ="list-style-type: square">
+						<li> Operational Metrics</li>
+						<li> Startup Finance </li>
+						<li> Legal Structure </li>
+					</ul>
+				</div>
+					
+			</section>
+
+			<section>
+				<div>
+					<h3 id="Essays" class="priority"> Essays </h3>
+				<!--adding a button to populate a message within a paragraph element once you click on it, this is javascript code, from "document..."-->
+					<p id = "myParagraph"></p>
+					<button type="button"
+					onclick="document.getElementById('myParagraph').innerHTML =
+					'NO ESSAYS YET!'">Click</button>
+					<p> Monthly <span style = "color:red">essays</span> on important tech topics</p>
+				</div>
+			</section>
+
+
+			<section>
+				<div>
+					<h3 class="priority"> Additional Resources </h3>
+					<p> Books, blogs, podcasts and other additional resources</p>
+					<p id="prettyParagraph">VC NEEDS NO BOOKS, BRODA! (JUST KIDDING)</p>
+			<!--adding a button that will transform the text in the previous paragraph when I click it. The button was created in html, starting from "document.....".-->
+					<button type="button" onclick="applyStyling()">Make it pretty!</button>
+					<script>
+						function applyStyling() {
+						var paragraph = document.getElementById("prettyParagraph");
+						paragraph.style.color = "green";
+						paragraph.style.fontSize = "29px";
+						paragraph.style.fontWeight = "700";
+						}
+					</script>
+					<p></p>
+					<a href="http://avc.com/archive/#mba_mondays_archive" target="_blank">
+					AVC MBA Mondays
+					</a>
+				</div>
+			</section>
+
+<!--creating the basis for a data carrousel, we first use data to import the jquery library into the HTML document. then we include the bootstrap javascript file in the webpage, then the carousel strcture and finally, to animate the carousel, we add the last jquery code that goes through things every 4 second-->
+			<script
+				src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery
+				.min.js">	
+			</script>
+
+			<script
+				src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstr
+				ap.min.js">
+			</script>
+
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						STARTUPS ARE HARD.
+					</div>
+					<div class="item">
+						STARTUPS ARE AWESOME.
+					</div>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+				$(document).ready(function() {
+				$("#myCarousel").carousel({interval: 2000});
+				});
+			</script>
+
+		</body>
+	</htlm>
+
+
+
+
+
+
+
